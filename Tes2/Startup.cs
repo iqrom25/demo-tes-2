@@ -47,7 +47,9 @@ namespace Tes2
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(name: "default",
+                                             pattern: "{controller=User}/{action=users}/{id?}"
+                                             );
             });
         }
     }
